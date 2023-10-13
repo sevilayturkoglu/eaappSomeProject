@@ -9,7 +9,7 @@ import utilities.ReusableMethods;
 
 public class EmployeeListStepDef {
 
-    EmployeeListPage employeeList=new EmployeeListPage();
+    EmployeeListPage employeeList = new EmployeeListPage();
 
     @Then("I should go to Employee List link")
     public void i_should_go_to_employee_list_link() {

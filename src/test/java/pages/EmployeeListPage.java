@@ -57,7 +57,7 @@ public class EmployeeListPage {
 
 
     public void createNewEmployee() {
-       ReusableMethods.wait(1);
+        ReusableMethods.wait(1);
         name.sendKeys(faker.name().fullName());
         salary.sendKeys("140000");
         durationWorked.sendKeys("5");
@@ -88,15 +88,16 @@ name.click();
             emailListS.add(baslik.getText());
         }
         emailIndex = emailListS.indexOf(emailAdress);
-        String actualMail=emailListS.get(emailIndex);
-        Assert.assertEquals(emailListS.get(emailIndex),actualMail);
+        String actualMail = emailListS.get(emailIndex);
+        Assert.assertEquals(emailListS.get(emailIndex), actualMail);
 
     }
 
     public void verifyDeleteEmployeeInformation() {
         ReusableMethods.clickWithJSAsList(emailList);
-        int mailIndex2=emailIndex+2;
-        WebElement delete=Driver.getDriver().findElement(By.xpath("//tr["+mailIndex2+"]/td[6]/a[3]"));
+        //int mailIndex2=emailIndex+2;
+        emailIndex = emailIndex + 2;
+        WebElement delete = Driver.getDriver().findElement(By.xpath("//tr[" + emailIndex + "]/td[6]/a[3]"));
         ReusableMethods.wait(1);
         ReusableMethods.wait(1);
         delete.click();
@@ -108,9 +109,6 @@ name.click();
             emailListS.add(baslik.getText());
         }
         Assert.assertFalse(emailListS.contains(emailAdress));
-
-
-
 
 
     }

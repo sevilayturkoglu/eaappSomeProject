@@ -17,18 +17,18 @@ public class EaappHomePage {
     @FindBy(xpath = "//input[@id='UserName']")
     public WebElement username;
 
-    @FindBy(xpath  = "//input[@id='Password']")
+    @FindBy(xpath = "//input[@id='Password']")
     public WebElement password;
 
     @FindBy(xpath = "//input[@value='Log in']")
     public WebElement loginButton;
 
 
-    public  void login() {
-       loginLink.click();
-       username.sendKeys(ConfigReader.getProperty("userName"));
-       password.sendKeys(ConfigReader.getProperty("password"));
-       loginButton.click();
+    public void login() {
+        loginLink.click();
+        username.sendKeys(ConfigReader.getProperty("userName"));
+        password.sendKeys(ConfigReader.getProperty("password"));
+        loginButton.click();
 
     }
 }
