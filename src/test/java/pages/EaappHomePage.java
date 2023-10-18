@@ -6,10 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class EaappHomePage {
-    public EaappHomePage() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
+public class EaappHomePage extends BasePage{
 
     @FindBy(linkText = "Login")
     public WebElement loginLink;

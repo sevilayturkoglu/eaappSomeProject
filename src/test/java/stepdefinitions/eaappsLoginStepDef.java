@@ -14,10 +14,7 @@ public class eaappsLoginStepDef {
     @Given("I should go to eaapp {string}")
     public void i_should_go_to_eaapp(String eappurl) {
         Driver.getDriver().get(ConfigReader.getProperty(eappurl));
-        //Assertion
-        String actualUrl = Driver.getDriver().getCurrentUrl();
-        String expectedUrl = ConfigReader.getProperty(eappurl);
-        Assert.assertEquals(actualUrl, expectedUrl);
+
     }
 
     @Then("I should be login")

@@ -7,8 +7,8 @@ Feature:As an admin I should be able to Create a new employee and delete the emp
 
 
     Scenario:Create a new employee and verify if the name is in the list before and after deleting
-      Then I should create new employee information
-      When I should see which my created  employee information
+      When I should create new employee information
+      Then I should see which my created  employee information
       And I should delete which my created  employee information
       And close the browser
 

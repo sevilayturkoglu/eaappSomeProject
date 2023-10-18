@@ -14,10 +14,7 @@ import utilities.ReusableMethods;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeListPage {
-    public EmployeeListPage() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
+public class EmployeeListPage extends BasePage{
 
     Faker faker = new Faker();
     Actions actions = new Actions(Driver.getDriver());
