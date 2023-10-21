@@ -86,7 +86,8 @@ name.click();
         }
         emailIndex = emailListS.indexOf(emailAdress);
         String actualMail = emailListS.get(emailIndex);
-        Assert.assertEquals(emailListS.get(emailIndex), actualMail);
+        //Assert.assertEquals(emailListS.get(emailIndex), actualMail);
+        Assert.assertEquals(actualMail, emailAdress);
 
     }
 
